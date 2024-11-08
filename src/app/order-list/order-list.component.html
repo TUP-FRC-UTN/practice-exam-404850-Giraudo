@@ -1,1 +1,36 @@
-<p>order-list works!</p>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="flex-row d-flex align-items-center">
+            <input type="text" class="col-md-6 m-2" [formControl]="search">
+            <button class="btn btn-outline-primary col-md-2 m-2">Buscar</button>
+        </div>
+    </div>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Codigo</th>
+            <th scope="col">Cliente</th>
+            <th scope="col">Email</th>
+            <th scope="col">Cant Prod</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (order of orders; track order) {
+              
+              <tr>
+                <td>{{order.orderCode}}</td>
+                <td>{{order.customerName}}</td>
+                <td>{{order.email}}</td>
+                <td>{{order.products.length}}</td>
+                <td>{{order.timestamp}}</td>
+                <td>{{order.total}}</td>
+              </tr>
+          }
+        </tbody>
+      </table>
+</div>

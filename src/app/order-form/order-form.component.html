@@ -1,3 +1,98 @@
-<div class="container">
-    HOLA
+<div class="container-fluid m-5 ">
+    
+    
+    <form [formGroup]="orderForm" (ngSubmit)="sendForm()" class="row g-3 container">
+
+        <!-- name -->
+        <div class="col-md-6">
+            <div class="flex-row d-flex align-items-center">
+                <label for="name" class="col-form-label col-md-2">Nombre</label>
+                <input
+                type="text"
+                class="form-control m-2"
+                id="name"
+                formControlName="name"
+                [ngClass]="{'is-invalid': orderForm.get('name')?.invalid && orderForm.get('name')?.touched, 'is-valid': orderForm.get('name')?.valid &&orderForm.get('name')?.touched}"
+                />
+            </div>
+            <div>
+                @if (orderForm.get('name')?.invalid && orderForm.get('name')?.touched) {
+                    @if (orderForm.get('name')?.errors?.['required']) {
+                        <small class="text-danger ms-2">requerido</small>
+                    }
+                }
+            </div>
+        </div>
+
+        <!-- email -->
+        <div class="col-md-6">
+            <div class="flex-row d-flex align-items-center">
+                <label for="email" class="col-form-label col-md-2">Email</label>
+                <input
+                type="text"
+                class="form-control m-2"
+                id="email"
+                formControlName="email"
+                [ngClass]="{'is-invalid': orderForm.get('email')?.invalid && orderForm.get('email')?.touched, 'is-valid': orderForm.get('email')?.valid &&orderForm.get('email')?.touched}"
+                />
+            </div>
+            <div>
+                @if (orderForm.get('email')?.invalid && orderForm.get('email')?.touched) {
+                    @if (orderForm.get('email')?.errors?.['required']) {
+                        <small class="text-danger ms-2">requerido</small>
+                    }
+                    @if (orderForm.get('email')?.errors?.['limit']) {
+                        <small class="text-danger ms-2">Alcanzaste el limite de compras diario</small>
+                    }
+                }
+            </div>
+        </div>
+
+        <div formArrayName="productsArray">
+            <button type="button" class="btn btn-outline-primary" (click)="addProdForm()">Agregar Producto</button>
+            @for(prodForm of productsArray.controls; track $index) {
+                <div [formGroupName]="$index" class="mt-2 border row g-3 p-2">
+                    <div class="flex-row d-flex align-items-center justify-content-between">
+                        <h5>Producto {{$index + 1}}</h5>
+                        <button class="btn btn-close" (click)="remove($index)"></button>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Nombre:</label>
+                        <select name="prodName" id="prodName" class="form-select" formControlName="prodName" (change)="selectProd($event, $index)">
+                            @for(prod of products; track prod) {
+                                <option [value]="prod.id">{{prod.name}}</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Cantidad</label>
+                        <input type="number" formControlName="quantity" class="form-control">
+                        <div>
+                            @if (prodForm.get('quantity')?.invalid && prodForm.get('quantity')?.touched) {
+                                @if (prodForm.get('quantity')?.errors?.['max']) {
+                                    <small class="text-danger ms-2">No hay suficiente stock</small>
+                                }
+                            }
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Precio</label>
+                        <input type="number" id="price" formControlName="price" class="form-control" >
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Stock</label>
+                        <input type="number" id="stock" formControlName="stock" class="form-control" >
+                    </div>
+                </div>
+            }
+            @if(orderForm.get('productsArray')?.getError('duplicated')) {
+                <small class="text-danger ms-2">Hay productos duplicados</small>
+            }
+        </div>
+        
+        <div class="flex-row d-flex justify-content-end ">
+            <button type="submit" class="btn btn-primary me-3">Enviar</button>
+        </div>
+
+    </form>
 </div>

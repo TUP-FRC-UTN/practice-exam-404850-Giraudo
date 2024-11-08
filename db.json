@@ -1,100 +1,212 @@
 {
-    "products": [
-      {
-        "id": "1",
-        "name": "Laptop Gaming Pro",
-        "price": 999.99,
-        "stock": 50
-      },
-      {
-        "id": "2",
-        "name": "Smartphone X12",
-        "price": 699.99,
-        "stock": 100
-      },
-      {
-        "id": "3",
-        "name": "Tablet Air",
-        "price": 449.99,
-        "stock": 75
-      },
-      {
-        "id": "4",
-        "name": "Smart Watch V4",
-        "price": 199.99,
-        "stock": 120
-      }
-    ],
-    "orders": [
-      {
-        "id": "1586",
-        "customerName": "juan Perez",
-        "email": "juanP@gmail.com",
-        "products": [
-          {
-            "productId": "1",
-            "quantity": 1,
-            "stock": 50,
-            "price": 999.99
-          }
-        ],
-        "total": 999.99,
-        "orderCode": "J.com065049",
-        "timestamp": "2024-10-28T14:51:05.049Z"
-      },
-      {
-        "id": "3db1",
-        "customerName": "juan perez",
-        "email": "juanP@gmail.com",
-        "products": [
-          {
-            "productId": "2",
-            "quantity": 1,
-            "stock": 100,
-            "price": 699.99
-          }
-        ],
-        "total": 699.99,
-        "orderCode": "J.com079946",
-        "timestamp": "2024-10-28T14:51:19.946Z"
-      },
-      {
-        "id": "3b59",
-        "customerName": "juan perez",
-        "email": "juanP@gmail.com",
-        "products": [
-          {
-            "productId": "2",
-            "quantity": 1,
-            "stock": 100,
-            "price": 699.99
-          }
-        ],
-        "total": 699.99,
-        "orderCode": "J.com097957",
-        "timestamp": "2024-10-28T14:51:37.957Z"
-      },
-      {
-        "id": "0f2c",
-        "customerName": "Luis Gigena",
-        "email": "luisG@gmail.com",
-        "products": [
-          {
-            "productId": "1",
-            "quantity": 1,
-            "stock": 50,
-            "price": 999.99
-          },
-          {
-            "productId": "2",
-            "quantity": 1,
-            "stock": 100,
-            "price": 699.99
-          }
-        ],
-        "total": 1529.982,
-        "orderCode": "L.com222249",
-        "timestamp": "2024-10-28T14:53:42.249Z"
-      }
-    ]
-  }
+  "products": [
+    {
+      "id": "1",
+      "name": "Laptop Gaming Pro",
+      "price": 999.99,
+      "stock": 50
+    },
+    {
+      "id": "2",
+      "name": "Smartphone X12",
+      "price": 699.99,
+      "stock": 100
+    },
+    {
+      "id": "3",
+      "name": "Tablet Air",
+      "price": 449.99,
+      "stock": 75
+    },
+    {
+      "id": "4",
+      "name": "Smart Watch V4",
+      "price": 199.99,
+      "stock": 120
+    }
+  ],
+  "orders": [
+    {
+      "id": "1586",
+      "customerName": "juan Perez",
+      "email": "juanP@gmail.com",
+      "products": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "stock": 50,
+          "price": 999.99
+        }
+      ],
+      "total": 999.99,
+      "orderCode": "J.com065049",
+      "timestamp": "2024-10-28T14:51:05.049Z"
+    },
+    {
+      "id": "3db1",
+      "customerName": "juan perez",
+      "email": "juanP@gmail.com",
+      "products": [
+        {
+          "productId": "2",
+          "quantity": 1,
+          "stock": 100,
+          "price": 699.99
+        }
+      ],
+      "total": 699.99,
+      "orderCode": "J.com079946",
+      "timestamp": "2024-10-28T14:51:19.946Z"
+    },
+    {
+      "id": "3b59",
+      "customerName": "juan perez",
+      "email": "juanP@gmail.com",
+      "products": [
+        {
+          "productId": "2",
+          "quantity": 1,
+          "stock": 100,
+          "price": 699.99
+        }
+      ],
+      "total": 699.99,
+      "orderCode": "J.com097957",
+      "timestamp": "2024-10-28T14:51:37.957Z"
+    },
+    {
+      "id": "0f2c",
+      "customerName": "Luis Gigena",
+      "email": "luisG@gmail.com",
+      "products": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "stock": 50,
+          "price": 999.99
+        },
+        {
+          "productId": "2",
+          "quantity": 1,
+          "stock": 100,
+          "price": 699.99
+        }
+      ],
+      "total": 1529.982,
+      "orderCode": "L.com222249",
+      "timestamp": "2024-10-28T14:53:42.249Z"
+    },
+    {
+      "id": "cacd",
+      "customerName": "mate mate",
+      "email": "admin@correo.com",
+      "orderCode": "m.com",
+      "products": [
+        {
+          "productId": "3",
+          "price": 449.99,
+          "quantity": 3,
+          "stock": 75
+        }
+      ],
+      "timestamp": "2024-11-08T04:22:04.154Z",
+      "total": 1214.973
+    },
+    {
+      "id": "df60",
+      "customerName": "asdasd",
+      "email": "asdadsa@correo.com",
+      "orderCode": "a.com2024-11-08T04:26:49.046Z",
+      "products": [
+        {
+          "productId": "2",
+          "price": 699.99,
+          "quantity": 12,
+          "stock": 100
+        }
+      ],
+      "timestamp": "2024-11-08T04:26:49.046Z",
+      "total": 7559.892000000001
+    },
+    {
+      "id": "3a22",
+      "customerName": "asd",
+      "email": "asdadsa@correo.com",
+      "orderCode": "a.com2024-11-08T04:27:42.221Z",
+      "products": [
+        {
+          "productId": "1",
+          "price": 999.99,
+          "quantity": 12,
+          "stock": 50
+        }
+      ],
+      "timestamp": "2024-11-08T04:27:42.221Z",
+      "total": 10799.892000000002
+    },
+    {
+      "id": "693f",
+      "customerName": "ewrqw",
+      "email": "qwe@correo.com",
+      "orderCode": "e.com2024-11-08T04:29:52.947Z",
+      "products": [
+        {
+          "productId": "3",
+          "price": 449.99,
+          "quantity": 19,
+          "stock": 75
+        }
+      ],
+      "timestamp": "2024-11-08T04:29:52.948Z",
+      "total": 7694.829
+    },
+    {
+      "id": "3d1c",
+      "customerName": "Jose",
+      "email": "jose@correo.com",
+      "orderCode": "J.com2024-11-08T05:13:02.375Z",
+      "products": [
+        {
+          "productId": "1",
+          "price": 999.99,
+          "quantity": 1,
+          "stock": 50
+        }
+      ],
+      "timestamp": "2024-11-08T05:13:02.375Z",
+      "total": 999.99
+    },
+    {
+      "id": "392d",
+      "customerName": "Jose",
+      "email": "jose@correo.com",
+      "orderCode": "J.com2024-11-08T05:13:23.203Z",
+      "products": [
+        {
+          "productId": "3",
+          "price": 449.99,
+          "quantity": 1,
+          "stock": 75
+        }
+      ],
+      "timestamp": "2024-11-08T05:13:23.203Z",
+      "total": 449.99
+    },
+    {
+      "id": "cb61",
+      "customerName": "Jose",
+      "email": "jose@correo.com",
+      "orderCode": "J.com2024-11-08T05:13:36.569Z",
+      "products": [
+        {
+          "productId": "3",
+          "price": 449.99,
+          "quantity": 1,
+          "stock": 75
+        }
+      ],
+      "timestamp": "2024-11-08T05:13:36.570Z",
+      "total": 449.99
+    }
+  ]
+}
